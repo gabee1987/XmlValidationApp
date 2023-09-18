@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Xml Validation Page";
+}
+@model XmlValidationApp.Models.XmlUploadViewModel
+
+<div class="text-center">
+    <h1 class="display-4">XML Validation Test</h1>
+    <form method="post" enctype="multipart/form-data" asp-action="ValidateXml">
+        <div class="form-group">
+            <label>XML File</label>
+            <input type="file" name="XmlFile" class="form-control" />
+            <span asp-validation-for="XmlFile" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Validate</button>
+    </form>
+</div>
